@@ -1,0 +1,34 @@
+// Functions,Mixins,Variables
+@import "scss/abstracts/variables";
+@import "scss/abstracts/mixin";
+
+// Reset,Typography,Helper Class
+@import "scss/base/reset";
+@import "scss/base/typography";
+@import "scss/base/helper_class";
+
+// Components
+@import "scss/components/buttons";
+@import "scss/components/animations";
+@import "scss/components/form";
+@import "scss/components/pagination";
+@import "scss/components/preloader";
+
+// Layout
+@import "scss/layout/header";
+@import "scss/layout/hero";
+@import "scss/layout/about";
+@import "scss/layout/resume";
+@import "scss/layout/services";
+@import "scss/layout/counters";
+@import "scss/layout/how_i_work";
+@import "scss/layout/skills";
+@import "scss/layout/portfolio";
+@import "scss/layout/team";
+@import "scss/layout/testimonial";
+@import "scss/layout/blog";
+@import "scss/layout/contact";
+@import "scss/layout/footer";
+@import "scss/layout/breadcrumb";
+@import "scss/layout/rtl";
+@import "scss/pages/intro";

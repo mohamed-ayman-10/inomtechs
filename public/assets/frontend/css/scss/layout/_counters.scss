@@ -1,0 +1,24 @@
+/* ---------------------------------------------------------------- */
+/* 14.Counters                      
+/* ---------------------------------------------------------------- */  
+#counters {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $color_primary;
+    background-image: url(../img/bg/counter-bg.png);
+}
+.counter-item {
+    margin-bottom: 30px;
+    text-align: center;
+    h3 {
+        font-size: 50px;
+        color: $color_white;
+        margin-bottom: 15px;
+    }
+    p {
+        font-weight: 500;
+        color: $color_white;
+        font-size: 18px;
+    }
+}

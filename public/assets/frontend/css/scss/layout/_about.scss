@@ -1,0 +1,153 @@
+/* ---------------------------------------------------------------- */
+/* 11.About                                           
+/* ---------------------------------------------------------------- */
+.about-inner {
+    > h6 {
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 50px;
+        color: $color_white;
+        padding: 8px 18px;
+        margin-bottom: 10px;
+        display: inline-block;
+        background: $color_primary;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    > p {
+        margin-bottom: 30px;
+    }
+    ul {
+        margin-bottom: 38px;
+        li {
+            display: flex;
+            align-items: start;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .text {
+                h5 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+.about-img {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    img {
+        border-radius: 50px;
+        transition: all 0.5s ease;
+        border: 20px solid $color_primary;
+    }
+    &:hover {
+        img {
+            border-color: $color_dark;
+        }
+        .about-video-btn {
+            background: $color_dark;
+            & ~ .video-border-line {
+                &:after, &:before {
+                    border-color: $color_dark;
+                }
+            }
+        }
+    }
+    .about-video-btn {
+        top: 50%;
+        right: -40px;
+        width: 100px;
+        height: 100px;
+        font-size: 25px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        position: absolute;
+        color: $color_white;
+        transition: all 0.5s ease;
+        background: $color_primary;
+        transform: translateY(-50%);
+        &:hover {
+            background: $color_dark;
+        }
+        &:hover ~ .video-border-line {
+            &:after, &:before {
+                border-color: $color_dark;
+            }
+        }
+    }
+    .video-border-line {
+        top: 50%;
+        z-index: -5;
+        right: -40px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        position: absolute;
+        transform: translateY(-50%);
+        &:after, &:before {
+            top: 50%;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+            transform: translateY(-50%);
+            border: 2px solid $color_primary; 
+        }
+        &:after {
+            right: -10px;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+        }
+        &:before {
+            right: -20px;
+            width: 140px;
+            height: 140px;
+            line-height: 140px;
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:992px) {
+    .about-img {
+        margin-bottom: 30px;
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (576px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:576px) {
+    .about-inner {
+        h2 {
+            font-size: 1.467rem;
+            line-height: 1.4;
+        }
+        .mb-resp-15 {
+            margin-bottom: 15px;
+        }
+    }
+    .about-img {
+        .video-border-line {
+            z-index: initial;
+            pointer-events: none;
+        }
+        .about-video-btn {
+            z-index: 1;
+        }
+        .about-video-btn, .video-border-line {
+            right: initial;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}

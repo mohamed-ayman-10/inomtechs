@@ -1,0 +1,84 @@
+/* ---------------------------------------------------------------- */
+/* 18.My Team
+/* ---------------------------------------------------------------- */  
+#team {
+    .section-heading {
+        margin-bottom: 26px;
+    }
+}
+.team-card {
+    position: relative;
+    margin-top: 124px;
+    .img {
+        left: 50%;
+        top: -100px;
+        padding: 10px;
+        position: absolute;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        transform: translateX(-50%);
+        border: 10px solid  $color_dark;
+        img {
+            border-radius: 50%;
+            position: relative;
+        }
+    }
+    .body {
+        text-align: center;
+        border-radius: 80px;
+        transition: all 0.5s ease;
+        background: $color_dark;
+        padding: 150px 30px 30px 30px;
+        .text {
+            margin-bottom: 30px;
+            h5 {
+                color: $color_white;
+                margin-bottom: 10px;
+            }
+            p {
+                font-weight: 500;
+                color: $color_white;
+                text-transform: uppercase;
+            }
+        }
+        .social {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    a {
+                        padding: 10px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        border: 2px solid $color_white;
+                        transition: all 0.5s ease;
+                        i {
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            border-radius: 50%;
+                            color: $color_primary;
+                            background: $color_white;
+                            transition: all 0.5s ease;
+                        }
+                        &:hover {
+                            border-color: $color_dark;
+                            i {
+                                color: $color_white;
+                                background: $color_dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .body {
+            background: $color_primary;
+        }
+        .img {
+            border-color: $color_primary;
+        }
+    }
+}

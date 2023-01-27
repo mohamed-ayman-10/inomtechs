@@ -1,0 +1,205 @@
+/* ---------------------------------------------------------------- */
+/* 10.Hero                                              
+/* ---------------------------------------------------------------- */
+.hero-banner {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $color_dark;
+    background-position: center center;
+    .hero-inner {
+        h1 {
+            margin-bottom: 30px;
+            color: $color_white;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 32px;
+            color: $color_white;
+            margin-bottom: 40px;
+            padding-right: 60px;
+            font-family: $font_text;
+        }
+    }
+}
+.hero-img {
+    text-align: right;
+    border-radius: 50%;
+    .border-line-outer, 
+    .border-line-inner {
+        padding: 20px;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block;
+        border: 2px solid $color_white;
+    }
+    img {
+        border-radius: 50%;
+        display: inline-block;
+        border: 20px solid $color_primary;
+    }
+}
+.hero-social-list {
+    top: 50%;
+    right: 30px;
+    z-index: 1115;
+    position: absolute;
+    transform: translateY(-50%);
+    li {
+        margin-bottom: 20px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            i {
+                font-size: 20px;
+                color: $color_white;
+                transition: all 0.5s ease;
+            }
+            &:hover {
+                i {
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+}
+.scroll-down-btn, .hero-email-link {
+    bottom: 30px;
+    font-size: 0.7rem;
+    position: absolute;
+    color: $color_white;
+    letter-spacing: 3px;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    &:after {
+        width: 2px;
+        height: 20px;
+        content: "";
+        margin-top: 15px;
+        display: inline-block;
+        vertical-align: baseline;
+        background: $color_white;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+.scroll-down-btn {
+    left: 30px;
+}
+.hero-email-link {
+    right: 30px;
+}
+#hero-particles-effect {
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .hero-img {
+        position: relative;
+        z-index: 1;
+    }
+}
+#heroparticles {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#heroSliderContainer {
+    z-index: 32;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background: initial;
+    .vegas-overlay {
+        background: $color_dark;
+        opacity: 0.5;
+    }
+}
+#hero_video {
+    z-index: 35;
+    width: 100%;
+    overflow: hidden;
+    background: none;
+    position: relative;
+    object-fit: scale-down;
+    .hero-overlay {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+        position: absolute;
+        background: $color_dark;
+    }
+    .container {
+        z-index: 27;
+        position: relative;
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:991.98px) {
+    .hero-banner {
+        text-align: center;
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 110px;
+        .row {
+            justify-content: center;
+        }
+        .hero-inner {
+            h2 {
+                padding-right: 0;
+            }
+        }
+        .hero-img-resp {
+            text-align: center;
+            .hero-img {
+                margin-top: 30px;
+                max-width: 250px;
+                display: inline-block;
+                img {
+                    border: 10px solid $color_primary;
+                }
+            }
+        }
+    }
+    .hero-social-list, .hero-email-link, .scroll-down-btn {
+        display: none;
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (576px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:575.98px) {
+    .hero-banner {
+        .hero-inner {
+            h1 {
+                font-size: 1.467rem;
+                line-height: 1.4;
+                margin-bottom: 15px;
+            }
+            h2 {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

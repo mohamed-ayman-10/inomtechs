@@ -1,0 +1,125 @@
+/* ---------------------------------------------------------------- */
+/* 15.How I Work       
+/* ---------------------------------------------------------------- */  
+.how-i-work-item {
+    z-index: 1;
+    text-align: center;
+    position: relative;
+    margin-bottom: 70px;
+    .arrow-dashed-img {
+        top: -50px;
+        right: -87px;
+        position: absolute;
+    }
+    .number {
+        left: 50%;
+        top: -30px;
+        text-align: center;
+        position: absolute;
+        transform: translateX(-50%);
+        span {
+            width: 80px;
+            height: 80px;
+            font-size: 32px;
+            font-weight: 700;
+            position: relative;
+            line-height: 80px;
+            border-radius: 50%;
+            color: $color_white;
+            display: inline-block;
+            font-family: $font_heading;
+            background: $color_dark_2; 
+            transition: all 0.5s ease;
+        }
+    }
+    .number-border {
+        left: 50%;
+        top: 10px;
+        z-index: -3;
+        position: absolute;
+        margin-left: 30px;
+        transform: translateX(-50%);
+        &:after, &:before {
+            top: 0;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+            transform: translateY(-50%);
+            border: 2px solid $color_dark_2; 
+        }
+        &:after {
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+        }
+        &:before {
+            right: -30px;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+        }
+    }
+    .img {
+        margin-bottom: 50px;
+        border-radius: 50%;
+        img {
+            border-radius: 50%;
+            transition: all 0.5s ease;
+            border: 20px solid $color_dark_2;
+        }
+    }
+    .text {
+        padding: 30px;
+        text-align: center;
+        position: relative;
+        border-radius: 80px;
+        background: $color_dark_2;
+        transition: all 0.5s ease;
+        &:after {
+            top: -60px;
+            left: 50%;
+            content: "";
+            position: absolute;
+            border: 30px solid;
+            transition: all 0.5s ease;
+            border-color: transparent transparent $color_dark_2 transparent;
+            transform: translate(-50%);
+        }
+        h5 {
+            color: $color_white;
+        }
+    }
+    &:hover {
+        .number {
+            span {
+                background: $color_primary; 
+            }
+        }
+        .img {
+            img {
+                border-color: $color_primary;
+            }
+        }
+        .text {
+            background: $color_primary;
+            &:after {
+                border-color: transparent transparent $color_primary transparent;
+            }
+        }
+        .number-border {
+            &:after, &:before {
+                border-color: $color_primary; 
+            }
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (768px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:767.98px) {
+    .arrow-dashed-img {
+        display: none;
+    }
+}

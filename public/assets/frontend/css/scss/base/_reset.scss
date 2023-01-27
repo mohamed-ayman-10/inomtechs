@@ -1,0 +1,76 @@
+
+/* -------------------------------------------------------------------
+   Base                               
+   ------------------------ /
+ * 01.Base
+ * 02.Typography
+ * 03.Helper Class
+   ------------------------ /
+   Components                               
+   ------------------------ /
+ * 04.Buttons  
+ * 05.Animations 
+ * 06.Form(Input, Comment)
+ * 07.Pagination 
+ * 08.Preloader
+   ------------------------ /
+   Layout                               
+   ------------------------ /
+ * 09.Header
+ * 10.Hero
+ * 11.About
+ * 12.Resume 
+ * 13.Services
+ * 14.Counters
+ * 15.How I Work
+ * 16.My Skills
+ * 17.Portfolio
+ * 18.My Team
+ * 19.Testimonial
+ * 20.Blog
+ * 21.Contact
+ * 22.Footer
+ * 23.Breadcrumb
+ * 24.Rtl Mode 
+ * 25.Home Intro
+------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- */
+/* 01.Base                               
+/* ---------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: $font_text; 
+    font-weight: 400; 
+    color: $body_text;
+}
+body {
+    position: relative;
+}
+::selection {
+    color: $color_white;
+    background: $color_dark;
+}
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+}
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+textarea, textarea:focus, input, input:focus, button, button:focus {
+    outline: none;
+    resize: inherit;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}
+.container {
+    max-width: 1200px;
+}

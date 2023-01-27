@@ -1,0 +1,189 @@
+/* ---------------------------------------------------------------- */
+/* 16.My Skills    
+/* ---------------------------------------------------------------- */  
+.skills-inner {
+    > h6 {
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 50px;
+        color: $color_white;
+        padding: 8px 18px;
+        margin-bottom: 10px;
+        display: inline-block;
+        background: $color_primary;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    > p {
+        margin-bottom: 30px;
+    }
+    ul {
+        margin-bottom: 30px;
+        li {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: $color_dark;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:before {
+                content: "\f00c";
+                font-weight: 700;
+                vertical-align: middle;
+                margin-right: 15px;
+                display: inline-block;
+                color: $color_primary;
+                font-family: "Font Awesome 5 Free";
+            }
+        }
+    }
+    .skills-item {
+        text-align: center;
+        border-radius: 30px;
+        background: $color_white;
+        transition: all 0.5s ease;
+        box-shadow: 0 15px 30px 0 rgba($color_primary,0.15);
+        .skills-item-text {
+            h5 {
+               padding: 20px;
+               font-size: 20px;
+               color: $color_white;
+               border-radius: 100px;
+               background: $color_primary;
+            }
+        }    
+        .body {
+            padding: 30px;
+            h2 {
+                &:after {
+                    content: "%";
+                    font-family: $font_heading;
+                    margin-left: 10px;
+                    display: inline-block;
+                }
+            }
+        }
+        .skills-progress-bar {
+            height: 7px;
+            position: relative;
+            background: $color_dark;
+            margin-top: 10px;
+            overflow: hidden;
+            .skills-progress-value {
+                top: 0;
+                left: 0;
+                height: 100%;
+                position: absolute;
+                background: $color_primary;
+            }
+        }
+    }
+}
+.skills-img {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    img {
+        border-radius: 50px;
+        transition: all 0.5s ease;
+        border: 20px solid $color_primary;
+    }
+    &:hover {
+        img {
+            border-color: $color_dark;
+        }
+        .icon-check {
+            background: $color_dark;
+        }
+        .icon-border-line {
+            &:after, &:before {
+                border-color: $color_dark;
+            }
+        }
+    }
+    .icon-check {
+        top: 50%;
+        right: -40px;
+        width: 100px;
+        height: 100px;
+        font-size: 25px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        position: absolute;
+        color: $color_white;
+        transition: all 0.5s ease;
+        background: $color_primary;
+        transform: translateY(-50%);
+    }
+    .icon-border-line {
+        top: 50%;
+        z-index: -5;
+        right: -40px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        position: absolute;
+        transform: translateY(-50%);
+        &:after, &:before {
+            top: 50%;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+            transform: translateY(-50%);
+            border: 2px solid $color_primary; 
+        }
+        &:after {
+            right: -10px;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+        }
+        &:before {
+            right: -20px;
+            width: 140px;
+            height: 140px;
+            line-height: 140px;
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:992px) {
+    .skills-img {
+        margin-bottom: 30px;
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (576px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:576px) {
+    .skills-item-resp {
+        margin-top: 24px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .skills-inner {
+        > h2 {
+            font-size: 1.467rem;
+            line-height: 1.4;
+        }
+        .mb-resp-15 {
+            margin-bottom: 15px;
+        }
+    }
+    .skills-img {
+        .icon-check {
+            display: none;
+        }
+        .icon-border-line {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,157 @@
+/* ---------------------------------------------------------------- */
+/* 22.Footer                   
+/* ---------------------------------------------------------------- */
+.footer {
+    background: $color_dark;
+    .footer-top {
+        padding: 80px 0 50px 0;
+        .footer-widget {
+            margin-bottom: 30px;
+            .footer-logo {
+                margin-bottom: 10px;
+            }
+            .footer-desc {
+                opacity: 0.75;
+                color: $color_white;
+                margin-bottom: 20px;        
+            }
+            .footer-title {
+                font-size: 18px;
+                font-weight: 600;
+                color: $color_white;
+                margin-bottom: 30px;
+                position: relative;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+                &:after {
+                    width: 50px;
+                    height: 2px;
+                    content: "";
+                    display: block;
+                    margin-top: 10px;
+                    background: $color_primary;
+                }
+            }
+            .footer-social-links {
+                a {
+                    padding: 5px;
+                    text-align: center;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    color: $color_white;
+                    display: inline-block;
+                    transition: all 0.5s ease;
+                    border: 2px solid rgba($color_white,0.1);
+                    i {
+                        width: 40px;
+                        height: 40px;
+                        font-size: 16px;
+                        color: $color_white;
+                        line-height: 40px;
+                        text-align: center;
+                        border-radius: 50%;
+                        display: inline-block;
+                        transition: all 0.5s ease;
+                        background: rgba($color_white,0.1);
+                    }
+                    &:hover {
+                        border-color: $color_primary;
+                        i {
+                            color: $color_white !important;
+                            background: $color_primary;
+                        }
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            .footer-contact-info-list {
+                li {
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    h6 {
+                        font-weight: 600;
+                        color: $color_white;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        color: $color_white;
+                        opacity: 0.75;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .footer-links {
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    span {
+                        color: $color_white;
+                    }
+                    a {
+                        color: $color_white;
+                        transition: all 0.5s ease;
+                        &:hover {
+                            opacity: 1;
+                            color: $color_white;
+                            text-decoration: underline;
+                        }
+                    }
+                    &:before {
+                        content: "\f054";
+                        font-weight: 600;
+                        margin-right: 15px;
+                        display: inline-block;
+                        color: $color_primary;
+                        transition: all 0.5s ease;
+                        font-family: "Font Awesome 5 Free";
+                    }
+                }
+            }
+        }   
+    }
+    .copyright {
+        background: rgba($color_white, 0.03);
+        padding: 30px 0;
+        .copyright-text {
+            color: $color_white;
+            opacity: 0.75;
+            line-height: 38px;
+        }
+        .footer-payment {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 5px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    i {
+                        color: $color_white;
+                        font-size: 35px;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (768px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:768px) {
+    .footer {
+        .copyright {
+            .footer-payment {
+                margin-top: 30px;
+            }
+        }
+    }
+}

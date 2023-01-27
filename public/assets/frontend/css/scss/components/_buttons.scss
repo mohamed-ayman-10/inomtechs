@@ -1,0 +1,165 @@
+/* ---------------------------------------------------------------- */
+/* 04.Buttons                                                     
+/* ---------------------------------------------------------------- */
+.white-btn {
+    z-index: 1;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    align-items: center;
+    display: inline-flex;
+    transition: all 0.5s ease;
+    background: $color_primary;
+    .text  {
+        padding: 0 20px 0 30px;
+        text-transform: uppercase;
+        color: $color_white !important;
+    }
+    .icon {
+        padding: 5px;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        border: 2px solid $color_white;
+        i {
+            width: 46px;
+            height: 46px;
+            font-size: 16px;
+            border-radius: 50%;
+            line-height: 46px;
+            text-align: center;
+            color: $color_primary;
+            display: inline-block;
+            background: $color_white;
+            transition: all 0.5s ease;
+        }
+    }
+    &:hover {
+        background: $color_white;
+        .text  {
+            color: $color_primary !important;
+        }
+        .icon {
+            border-color: $color_primary;
+            i {
+                background: $color_primary;
+                color: $color_white;
+            }
+        }
+    }
+}
+.primary-btn {
+    z-index: 1;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+    background: $color_primary;
+    .text  {
+        padding: 0 20px 0 30px;
+        text-transform: uppercase;
+        color: $color_white !important;
+    }
+    .icon {
+        padding: 5px;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        border: 2px solid $color_white;
+        i {
+            width: 46px;
+            height: 46px;
+            font-size: 16px;
+            border-radius: 50%;
+            line-height: 46px;
+            text-align: center;
+            display: inline-block;
+            background: $color_white;
+            color: $color_primary;
+        }
+    }
+    &:hover {
+        background: $color_dark;
+        .text  {
+            color: $color_white !important;
+        }
+        .icon {
+            border-color: $color_primary;
+            i {
+                background: $color_primary;
+                color: $color_white;
+            }
+        }
+    }
+}
+
+.scroll-phone-btn,
+.scroll-facebook-btn,
+.scroll-top-btn {
+	bottom: 0;
+	opacity: 0;
+	right: 10px;
+    padding: 5px;
+    z-index: 144;
+    position: fixed;
+    text-align: center;
+    border-radius: 50%;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    border: 2px solid $color_primary;
+    i {
+        width: 46px;
+        height: 46px;
+        font-size: 16px;
+        color: $color_white;
+        line-height: 46px;
+        text-align: center;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all 0.5s ease;
+        background: $color_primary;
+    }
+    &:hover {
+        border-color: $color_dark;
+        i {
+            background: $color_dark;
+        }
+    }
+	&.active {
+		opacity: 1;
+		bottom: 10px;
+		visibility: visible;
+	}
+}
+.scroll-facebook-btn {
+    z-index: 146;
+	&.active {
+		opacity: 1;
+		bottom: 150px;
+		visibility: visible;
+	}
+}
+.scroll-phone-btn {
+    z-index: 144;
+	&.active {
+		opacity: 1;
+		bottom: 80px;
+		visibility: visible;
+	}
+}
+.scroll-top-btn {
+    z-index: 145;
+	&.active {
+		opacity: 1;
+		bottom: 10px;
+		visibility: visible;
+	}
+}
